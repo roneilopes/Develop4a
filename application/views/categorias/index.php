@@ -1,7 +1,7 @@
  <div id="main" class="container-fluid" style="margin-top: 50px">
  	<div id="top" class="row">
 		<div class="col-sm-3">
-			<h2>Cargos</h2>
+			<h2>Categorias</h2>
 		</div>
             
                 <!-- pesquisa -->
@@ -18,7 +18,7 @@
                 <!-- pesquisa -->
                 
 		<div class="col-sm-3">
-			<a href="<?= base_url('cargos/add')?>" class="btn btn-primary pull-right h2">Novo Cargo</a>
+			<a href="<?= base_url('categorias/add')?>" class="btn btn-primary pull-right h2">Nova Categoria</a>
 		</div>
 	</div> <!-- /#top -->
 
@@ -31,8 +31,7 @@
 			<thead>
 				<tr>
 					<th>ID</th>
-					<th>Descrição</th>
-					<th>Salário</th>
+					<th>Nome</th>
 					<th class="actions">Ações</th>
 				</tr>
 			</thead>
@@ -40,9 +39,8 @@
 				<tr>
 					<td>1001</td>
 					<td>Lorem ipsum dolor sit amet, consectetur adipiscing</td>
-					<td>Jes</td>
 					<td class="actions">
-						<a class="btn btn-warning btn-xs" href="<?= base_url('cargos/edit')?>">Editar</a>
+						<a class="btn btn-warning btn-xs" href="<?= base_url('categorias/edit')?>">Editar</a>
 						<a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
 						
 					</td>
