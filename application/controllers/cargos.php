@@ -8,8 +8,15 @@ class Cargos extends Controller {
     }
 
     public function index() {
-
         $this->render('cargos/index');
+    }
+    
+    public function add(){
+         $this->render('cargos/add');
+    }
+    
+    public function edit(){
+         $this->render('cargos/edit');
     }
 
 }

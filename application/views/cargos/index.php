@@ -1,12 +1,11 @@
-
  <div id="main" class="container-fluid" style="margin-top: 50px">
-
  	<div id="top" class="row">
 		<div class="col-sm-3">
 			<h2>Cargos</h2>
 		</div>
+            
+                <!-- pesquisa -->
 		<div class="col-sm-6">
-
 			<div class="input-group h2">
 				<input name="data[search]" class="form-control" id="search" type="text" placeholder="Pesquisar Itens">
 				<span class="input-group-btn">
@@ -15,10 +14,11 @@
 					</button>
 				</span>
 			</div>
-
 		</div>
+                <!-- pesquisa -->
+                
 		<div class="col-sm-3">
-			<a href="add.html" class="btn btn-primary pull-right h2">Novo Item</a>
+			<a href="<?= base_url('cargos/add')?>" class="btn btn-primary pull-right h2">Novo Cargo</a>
 		</div>
 	</div> <!-- /#top -->
 
@@ -33,7 +33,6 @@
 					<th>ID</th>
 					<th>Descrição</th>
 					<th>Salário</th>
-					<th>Header 3</th>
 					<th class="actions">Ações</th>
 				</tr>
 			</thead>
@@ -42,11 +41,10 @@
 					<td>1001</td>
 					<td>Lorem ipsum dolor sit amet, consectetur adipiscing</td>
 					<td>Jes</td>
-					<td>01/01/2015</td>
 					<td class="actions">
-
-						<a class="btn btn-warning btn-xs" href="edit.html">Editar</a>
+						<a class="btn btn-warning btn-xs" href="<?= base_url('cargos/edit')?>">Editar</a>
 						<a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+						
 					</td>
 				</tr>
 				

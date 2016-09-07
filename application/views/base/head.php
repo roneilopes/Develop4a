@@ -20,7 +20,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><?= get_site_title() ?></a>
+                <a class="navbar-brand" href="<?= base_url() ?>"><?= get_site_title() ?></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -33,22 +33,6 @@
                     <li><a href="<?= base_url('fornecedores') ?>">Fornecedores</a></li>
                     <li><a href="<?= base_url('produtos') ?>">Produtos</a></li>
                     <li><a href="<?= base_url('categorias') ?>">Categorias</a></li>
-<<<<<<< HEAD
-                </ul>
-                <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            Dropdown
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </div>
-=======
                     <li style="margin:10px 5px 0 0">
                         <div class="dropdown">
                             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -64,7 +48,6 @@
                         </div>
                     </li>
                 </ul>
->>>>>>> 3cedd6276cdb660e61d8bb59e79596e4ef7b70af
             </div>
         </div>
     </nav>
