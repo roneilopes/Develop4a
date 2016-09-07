@@ -3,7 +3,7 @@
 class Usuarios extends Controller {
     function   __construct() {
         parent::__construct();
-        $this->load->native_hrlper('URLhelper');
+        $this->load->native_helper('URLhelper');
     }
     public function index(){
         $this->render('usuarios/index');

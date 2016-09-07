@@ -33,7 +33,8 @@
                     <li><a href="<?= base_url('fornecedor') ?>">Fonecedor</a></li>
                     <li><a href="<?= base_url('produtos') ?>">Produtos</a></li>
                     <li><a href="<?= base_url('categorias') ?>">Categorias</a></li>
-                    <div class="dropdown">
+                </ul>
+                <div class="dropdown">
                         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             Dropdown
                             <span class="caret"></span>
@@ -46,7 +47,6 @@
                             <li><a href="#">Separated link</a></li>
                         </ul>
                     </div>
-                </ul>
             </div>
         </div>
     </nav>
