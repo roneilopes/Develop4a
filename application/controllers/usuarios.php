@@ -12,4 +12,3 @@ class Usuarios extends Controller {
          $this->render('usuarios/add');
     }
 }
-?>
