@@ -2,7 +2,7 @@
 
     <h3 class="page-header">Adicionar Usuario</h3>
 
-    <form action="<?= base_url('usuarios/add') ?>" method="post">
+    <form action="<?= base_url('usuarios') ?>" method="post">
         <div class="row">
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Nome</label>
