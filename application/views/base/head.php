@@ -27,25 +27,26 @@
                     <li><a href="<?= base_url() ?>">Início</a></li>
                     <li><a href="<?= base_url('enderecos') ?>">Endereços</a></li>
                     <li><a href="<?= base_url('cargos') ?>">Cargos</a></li>
-                    <li><a href="<?= base_url('funcionarios') ?>">Funcionarios</a></li>
+                    <li><a href="<?= base_url('funcionarios') ?>">Funcionários</a></li>
                     <li><a href="<?= base_url('clientes') ?>">Clientes</a></li>
                     <li><a href="<?= base_url('pedidos') ?>">Pedidos</a></li>
-                    <li><a href="<?= base_url('fornecedor') ?>">Fonecedor</a></li>
+                    <li><a href="<?= base_url('fornecedores') ?>">Fornecedores</a></li>
                     <li><a href="<?= base_url('produtos') ?>">Produtos</a></li>
                     <li><a href="<?= base_url('categorias') ?>">Categorias</a></li>
-                    <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            Dropdown
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </div>
+                    <li style="margin:10px 5px 0 0">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <i class="glyphicon glyphicon-cog"></i>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="#">NomeUsuário</a></li>
+                                <li><a href="<?=base_url('usuarios')?>">Usuários</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="<?=base_url('Usuarios/logout')?>">Sair</a></li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
