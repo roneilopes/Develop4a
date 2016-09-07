@@ -17,7 +17,7 @@
 			
 		</div>
 		<div class="col-sm-3">
-			<a href="<?= base_url('usuarios/add')?>" class="btn btn-primary pull-right h2">Novo Usuário</a>
+			<a href="<?=base_url('usuarios/add')?>" class="btn btn-primary pull-right h2">Novo Usuário</a>
 		</div>
 	</div> <!-- /#top -->
  

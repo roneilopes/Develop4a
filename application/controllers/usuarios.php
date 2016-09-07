@@ -1,14 +1,18 @@
 <?php
 
 class Usuarios extends Controller {
-    function   __construct() {
+
+    function __construct() {
         parent::__construct();
-        $this->load->native_helper('URLhelper');
+        $this->load->native_helper('URLHelper');
     }
-    public function index(){
+
+    public function index() {
         $this->render('usuarios/index');
     }
-    public function add(){
-         $this->render('usuarios/add');
+
+    public function add() {
+        $this->render('usuarios/add');
     }
 }
+?>
