@@ -6,9 +6,18 @@ class Clientes extends Controller {
         parent::__construct();
         $this->load->native_helper('URLHelper');
     }
-
+        
     public function index() {
+        $cli = new Cliente();
+        $cli->get();
+        //print_r($cli->to_array()).'<br><br>';
+        //print_r($cli->all_to_array());
+        $this->data['valores'] = $cli->all_to_array();
+        $this->view('index', $this->data['valores']);
+        //$this->data['valores'] = "all_to_array";
+        var_dump($cli->all_to_array());
         $this->render('clientes/index');
+        
     }
 
     public function add() {

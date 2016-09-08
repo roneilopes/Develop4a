@@ -2,7 +2,7 @@
   
   <h3 class="page-header">Editar Endereço</h3>
   
-  <form action="<?= base_url('add')?>" method="post">
+  <form action="<?= base_url('enderecos/add')?>" method="post">
   	<div class="row">
           <div class="form-group col-md-4">
   	  	<label for="id">Id</label>

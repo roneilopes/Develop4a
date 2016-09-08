@@ -10,9 +10,10 @@ class Controller{
 	}
 
 	protected function view($file, Array $vars = null){
-		if(count($vars) > 0)
-			extract($vars);
-		require_once ('application/views/'.$file.'.php');
+            if (count($vars) > 0) {
+            extract($vars);
+        }
+        require_once ('application/views/'.$file.'.php');
 	}
 
 	/*EXAMPLE:

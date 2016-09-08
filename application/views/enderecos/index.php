@@ -43,12 +43,12 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td></td>
-					<td></td>
-                                        <td></td>
-                                        <td></td>
-					<td></td>
-                                        <td></td>
+					<td><?php echo $valores[0]['id']; ?></td>
+					<td><?php echo $valores[0]['cep']; ?></td>
+					<td><?php echo $valores[0]['logradouro']; ?></td>
+					<td><?php echo $valores[0]['bairro']; ?></td>
+					<td><?php echo $valores[0]['cidade']; ?></td>
+					<td><?php echo $valores[0]['estado']; ?></td>
 					<td class="actions">
 						<a class="btn btn-warning btn-xs" href="<?= base_url('enderecos/edit')?>">Editar</a>
 						<a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>

@@ -20,6 +20,18 @@
   	  	<label for="renda">Renda</label>
                 <input type="number" class="form-control" name="renda" placeholder="Renda">
   	  </div>
+          <div class="row">
+            <div class="form-group col-md-4">
+                <label for="endereco">Endereco</label>
+                <select name="endereco_id" id="endereco" class="form-control" placeholder="Selecione">
+                    <option> Selecione</option>
+                    <option value="gerente" ><? ?></option>
+                    <option value="financa" > Financeiro</option>
+                    <option value="diretor" > Diretoria</option>
+                    <option value="ti" > Informática</option>
+                </select>
+            </div>
+          </div>
           <!-- **Perguntar**data cadastro e endereço_id -->
 	</div>
 	

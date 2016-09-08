@@ -42,7 +42,7 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>1001</td>
+					<td><?php echo $this->data[0]['id']?></td>
 					<td>Lorem ipsum dolor sit amet, consectetur adipiscing</td>
 					<td class="actions">
 						<a class="btn btn-warning btn-xs" href="<?= base_url('clientes/edit')?>">Editar</a>
