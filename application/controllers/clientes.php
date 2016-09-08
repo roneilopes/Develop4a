@@ -15,7 +15,7 @@ class Clientes extends Controller {
         $this->data['valores'] = $cli->all_to_array();
         $this->view('index', $this->data['valores']);
         //$this->data['valores'] = "all_to_array";
-        var_dump($cli->all_to_array());
+        //var_dump($cli->all_to_array());
         $this->render('clientes/index');
         
     }
