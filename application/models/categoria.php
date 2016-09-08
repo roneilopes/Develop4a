@@ -1,16 +1,13 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+class Categoria  extends Model{
 
-/**
- * Description of categorias
- *
- * @author marcelo
- */
-class categorias {
-    //put your code here
+	protected $tabela = 'categoria';
+	#protected $one_to_one = array();
+	#protected $one_to_many = array();
+	#protected $many_to_many = array();
+
+	public function __construct(){
+		parent::__construct();
+	}
 }
