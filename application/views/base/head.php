@@ -21,7 +21,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<?= base_url() ?>"><?= get_site_title() ?></a>
+                <a class="navbar-brand" href="<?= base_url() ?>"><strong><?= get_site_title() ?></strong></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -42,7 +42,7 @@
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                <li><a href="#">NomeUsuário</a></li>
+                                <li><a href="#">Nome Usuário</a></li>
                                 <li><a href="<?=base_url('usuarios')?>">Usuários</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="<?=base_url('Usuarios/logout')?>">Sair</a></li>
