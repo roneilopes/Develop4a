@@ -15,6 +15,7 @@ class Clientes extends Controller {
         if(isset ($_POST['submit'])){
             $novo = $this->post_to_obj(array('nome','cpf','telefone','renda','data_nascimento','endereco_id'), new Cliente());
             $novo->save();
+            $this->render('clientes/index');
         }else{
             $this->render('clientes/add');
         }
