@@ -1,6 +1,6 @@
 <?php
 
-class Usuarios  extends Model{
+class Usuario  extends Model{
 
 	protected $tabela = 'usuarios';
 	#protected $one_to_one = array();
