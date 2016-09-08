@@ -11,6 +11,3 @@ class Endereco extends Model{
 		parent::__construct();
 	}
 }
-class clientes {
-    //put your code here
-}
