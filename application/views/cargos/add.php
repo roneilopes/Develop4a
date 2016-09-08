@@ -4,10 +4,6 @@
   
   <form action="<?= base_url('add')?>" method="post">
   	<div class="row">
-  	  <div class="form-group col-md-4">
-  	  	<label for="id">ID</label>
-                <input type="number" class="form-control" id="id" placeholder="Id">
-  	  </div>
 	  <div class="form-group col-md-4">
   	  	<label for="descricao">Descrição</label>
   	  	<input type="text" class="form-control" id="descricao" placeholder="Descrição">

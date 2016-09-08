@@ -1,6 +1,6 @@
 <div id="main" class="container-fluid">
   
-  <h3 class="page-header">Editar Categoria</h3>
+  <h3 class="page-header">Editar Clientes'</h3>
   
   <form action="<?= base_url('edit')?>" method="post">
   	<div class="row">

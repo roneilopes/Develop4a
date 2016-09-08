@@ -1,6 +1,6 @@
 <?php
 
-class Usuarios extends Controller {
+class Clientes extends Controller {
 
     function __construct() {
         parent::__construct();
@@ -8,16 +8,15 @@ class Usuarios extends Controller {
     }
 
     public function index() {
-        $this->render('usuarios/index');
+        $this->render('clientes/index');
     }
 
     public function add() {
         if(isset ($_POST['submit'])){
-            $novo = $this->post_to_obj(array('nome','sobrenome','login','senha','grupo'), new Usuario());
+            $novo = $this->post_to_obj(array('nome','cpf','telefone','renda','data_nascimento','endereco_id'), new Cliente());
             $novo->save();
-            $this->render('usuarios/index');
         }else{
-            $this->render('usuarios/add');
+            $this->render('clientes/add');
         }
     }
 }
