@@ -25,6 +25,7 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="<?= base_url() ?>">Início</a></li>
+                    <li><a href="<?= base_url('usuarios') ?>">Usuários</a></li>
                     <li><a href="<?= base_url('enderecos') ?>">Endereços</a></li>
                     <li><a href="<?= base_url('cargos') ?>">Cargos</a></li>
                     <li><a href="<?= base_url('funcionarios') ?>">Funcionários</a></li>

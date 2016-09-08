@@ -4,19 +4,15 @@
   
   <form action="<?= base_url('add')?>" method="post">
   	<div class="row">
-  	  <div class="form-group col-md-4">
-  	  	<label for="id">ID</label>
-                <input type="number" class="form-control" id="id" placeholder="Id">
-  	  </div>
 	  <div class="form-group col-md-4">
   	  	<label for="nome">Nome</label>
-  	  	<input type="text" class="form-control" id="nome" placeholder="Nome">
+  	  	<input type="text" class="form-control" id="nome" placeholder="Nome da categoria">
           </div>
 	</div>
 	<hr>
 	<div class="row">
 	  <div class="col-md-12">
-	  	<button name="submit" type="submit" class="btn btn-primary">Salvar</button>
+	  	<button name="submit" type="submit" class="btn btn-primary">Adicionar Categoria</button>
 		<a href="<?= base_url('categorias')?>" class="btn btn-default">Cancelar</a>
 	  </div>
 	</div>
