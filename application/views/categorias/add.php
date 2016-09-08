@@ -2,11 +2,11 @@
   
   <h3 class="page-header">Adicionar Categoria</h3>
   
-  <form action="<?= base_url('add')?>" method="post">
+  <form action="<?= base_url('categorias/add')?>" method="post">
   	<div class="row">
 	  <div class="form-group col-md-4">
   	  	<label for="nome">Nome</label>
-  	  	<input type="text" class="form-control" id="nome" placeholder="Nome da categoria">
+                <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome da categoria">
           </div>
 	</div>
 	<hr>

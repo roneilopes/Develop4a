@@ -2,30 +2,29 @@
   
   <h3 class="page-header">Adicionar Endereço</h3>
   
-  <form action="<?= base_url('add')?>" method="post">
+  <form action="<?= base_url('enderecos/add')?>" method="post">
   	<div class="row">
 	  <div class="form-group col-md-4">
   	  	<label for="cep">Cep</label>
-                <input type="number" class="form-control" id="cep" placeholder="CEP">
+                <input type="number" class="form-control" name="cep" placeholder="CEP">
   	  </div>
 	  <div class="form-group col-md-4">
   	  	<label for="logradouro">Logradouro</label>
-                <input type="text" class="form-control" id="logradouro" placeholder="Logradouro">
+                <input type="text" class="form-control" name="logradouro" placeholder="Logradouro">
   	  </div>
           <div class="form-group col-md-4">
   	  	<label for="bairro">Bairro</label>
-                <input type="text" class="form-control" id="bairro" placeholder="Bairro">
+                <input type="text" class="form-control" name="bairro" placeholder="Bairro">
   	  </div>
           <div class="form-group col-md-4">
   	  	<label for="cidade">Cidade</label>
-                <input type="text" class="form-control" id="cidade" placeholder="Cidade">
+                <input type="text" class="form-control" name="cidade" placeholder="Cidade">
   	  </div>
           <div class="form-group col-md-4">
   	  	<label for="estado">Estado</label>
-                <input type="text" class="form-control" id="estado" placeholder="Estado">
+                <input type="text" class="form-control" name="estado" placeholder="Estado">
   	  </div>
-          <!-- data cadastro e endereço_id -->
-	</div>
+        </div>
 	
 	<hr>
 	
