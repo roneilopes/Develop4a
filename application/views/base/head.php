@@ -43,7 +43,6 @@
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                                 <li><a href="#">NomeUsuário</a></li>
                                 <li><a href="<?=base_url('usuarios')?>">Usuários</a></li>
-                                <li><a href="<?=base_url('usuarios/add')?>">AddUsuários</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="<?=base_url('Usuarios/logout')?>">Sair</a></li>
                             </ul>
