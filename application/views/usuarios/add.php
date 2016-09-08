@@ -1,30 +1,35 @@
 <div id="main" class="container-fluid">
 
-    <h3 class="page-header">Adicionar Usuario</h3>
+
+    <h3 class="page-header">Adicionar Usuário</h3>
 
     <form action="<?= base_url('usuarios/add') ?>" method="post">
         <div class="row">
             <div class="form-group col-md-4">
-                <label for="exampleInputEmail1">Nome</label>
-                <input type="text" name="nome" class="form-control" id="exampleInputEmail1" placeholder="Digite o Nome">
+                <label for="id">ID</label>
+                <input type="text" name="nome" class="form-control" id="id" placeholder="Digite o ID">
             </div>
             <div class="form-group col-md-4">
-                <label for="exampleInputEmail1">Sobrenome</label>
-                <input type="text" name="sobrenome" class="form-control" id="exampleInputEmail1" placeholder="Digite o Sobrenome">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" class="form-control" id="nome" placeholder="Digite o nome">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" name="sobrenome" class="form-control" id="sobrenome" placeholder="Digite o sobrenome">
             </div>
         </div>
         <div class="row">
             <div class="form-group col-md-4">
-                <label for="exampleInputEmail1">Login</label>
-                <input type="text" name="login"class="form-control" id="exampleInputEmail1" placeholder="Digite o Login">
+                <label for="login">Login</label>
+                <input type="text" name="login"class="form-control" id="login" placeholder="Digite o login">
             </div>
             <div class="form-group col-md-4">
-                <label for="exampleInputEmail1">Senha</label>
-                <input type="password" name="senha" class="form-control" id="exampleInputEmail1" placeholder="Digite a Senha">
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" class="form-control" id="senha" placeholder="Digite a senha">
             </div>
         </div>
 
-         <div class="row">
+        <div class="row">
             <div class="form-group col-md-4">
                 <label for="grupo">Grupo</label>
                 <select name="grupo" id="grupo" class="form-control" placeholder="Selecione">
@@ -43,7 +48,7 @@
             <div class="col-md-12">
                 <input type="hidden" name="submit"/>
                 <button name="submit" type="submit" class="btn btn-primary">Salvar</button>
-                <a href="<?=base_url('usuarios')?>" class="btn btn-default">Cancelar</a>
+                <a href="<?= base_url('usuarios') ?>" class="btn btn-default">Cancelar</a>
             </div>
         </div>
 
