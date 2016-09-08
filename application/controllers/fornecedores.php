@@ -1,6 +1,6 @@
 <?php
 
-class Fornecedores {
+class Fornecedores extends Controller {
 
     function __construct() {
         parent::__construct();
@@ -13,7 +13,7 @@ class Fornecedores {
     
     public function add(){
         if(isset ($_POST['submit'])){
-            $novo = $this->post_to_obj(array('nome','cnpj','telefone','endereco_id'), new Fornecedore());
+            $novo = $this->post_to_obj(array('nome','cnpj','telefone','endereco_id'), new Fornecedor());
             $novo->save();
             $this->render('fornecedores/index');
         }else{
