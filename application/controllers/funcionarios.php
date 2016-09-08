@@ -20,5 +20,8 @@ class Funcionarios extends Controller {
             $this->render('funcionarios/add');
         }
     }
+    public function edit(){
+         $this->render('funcionarios/edit');
+    }
 }
 ?>
