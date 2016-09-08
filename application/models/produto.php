@@ -2,7 +2,7 @@
 
 class Produto extends Model{
 
-	protected $tabela = 'produto';
+	protected $tabela = 'produtos';
 	#protected $one_to_one = array();
 	#protected $one_to_many = array();
 	#protected $many_to_many = array();

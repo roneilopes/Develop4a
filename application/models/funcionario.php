@@ -2,7 +2,7 @@
 
 class Funcionario extends Model{
 
-	protected $tabela = 'funcionario';
+	protected $tabela = 'funcionarios';
 	#protected $one_to_one = array();
 	#protected $one_to_many = array();
 	#protected $many_to_many = array();

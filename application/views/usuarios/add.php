@@ -41,7 +41,7 @@
 
         <div class="row">
             <div class="col-md-12">
-                <intput type="hidden" name="submit"/>
+                <input type="hidden" name="submit"/>
                 <button name="submit" type="submit" class="btn btn-primary">Salvar</button>
                 <a href="<?=base_url('usuarios')?>" class="btn btn-default">Cancelar</a>
             </div>

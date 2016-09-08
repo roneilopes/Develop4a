@@ -2,7 +2,7 @@
 
 class Pedido extends Model{
 
-	protected $tabela = 'pedido';
+	protected $tabela = 'pedidos';
 	#protected $one_to_one = array();
 	#protected $one_to_many = array();
 	#protected $many_to_many = array();

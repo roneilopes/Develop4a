@@ -2,7 +2,7 @@
 
 class Usuario  extends Model{
 
-	protected $tabela = 'usuario';
+	protected $tabela = 'usuarios';
 	#protected $one_to_one = array();
 	#protected $one_to_many = array();
 	#protected $many_to_many = array();

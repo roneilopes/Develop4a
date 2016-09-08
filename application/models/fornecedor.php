@@ -2,7 +2,7 @@
 
 class Fornecedor extends Model{
 
-	protected $tabela = 'fornecedor';
+	protected $tabela = 'fornecedores';
 	#protected $one_to_one = array();
 	#protected $one_to_many = array();
 	#protected $many_to_many = array();
