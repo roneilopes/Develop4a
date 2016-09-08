@@ -2,21 +2,21 @@
   
   <h3 class="page-header">Adicionar Funcionário</h3>
   
-  <form action="<?= base_url('add')?>" method="post">
+  <form action="<?= base_url('funcionarios/add')?>" method="post">
   	<div class="row">
 	  <div class="form-group col-md-4">
   	  	<label for="nome">Nome</label>
-  	  	<input type="text" class="form-control" id="nome" placeholder="Nome">
+  	  	<input type="text" class="form-control" name="nome" placeholder="Nome">
   	  </div>
 	  <div class="form-group col-md-4">
   	  	<label for="entrada">Entrada</label>
-                <input type="text" class="form-control" id="entrada" placeholder="Entrada">
+                <input type="text" class="form-control" name="entrada" placeholder="Entrada">
   	  </div>
           <div class="form-group col-md-4">
   	  	<label for="telefone">Telefone</label>
-                <input type="number" class="form-control" id="telefone" placeholder="Telefone">
+                <input type="number" class="form-control" name="telefone" placeholder="Telefone">
   	  </div>
-            
+          <!--falta cargo_id e endereco_id-->
 	</div>
 	
 	<hr>
