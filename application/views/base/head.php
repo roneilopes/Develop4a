@@ -8,6 +8,7 @@
 
         <link href="<?= base_assets() ?>css/bootstrap.min.css" rel="stylesheet">
         <link href="<?= base_assets() ?>css/style.css" rel="stylesheet">
+        
     </head>
     <body>
 
