@@ -15,6 +15,7 @@ class Pedidos extends Controller {
         if(isset ($_POST['submit'])){
             $novo = $this->post_to_obj(array('id','funcionario_id','cliente_id','data_cadastro'), new Pedido());
             $novo->save();
+            $this->render('pedidos/index');
         }else{
             $this->render('pedidos/add');
         }

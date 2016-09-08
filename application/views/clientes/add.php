@@ -2,25 +2,25 @@
   
   <h3 class="page-header">Adicionar Cliente</h3>
   
-  <form action="<?= base_url('add')?>" method="post">
+  <form action="<?= base_url('clientes/add')?>" method="post">
   	<div class="row">
 	  <div class="form-group col-md-4">
   	  	<label for="nome">Nome</label>
-  	  	<input type="text" class="form-control" id="nome" placeholder="Nome">
+  	  	<input type="text" class="form-control" name="nome" placeholder="Nome">
   	  </div>
 	  <div class="form-group col-md-4">
   	  	<label for="cpf">CPF</label>
-                <input type="number" class="form-control" id="cpf" placeholder="CPF">
+                <input type="number" class="form-control" name="cpf" placeholder="CPF">
   	  </div>
           <div class="form-group col-md-4">
   	  	<label for="telefone">Telefone</label>
-                <input type="number" class="form-control" id="telefone" placeholder="Telefone">
+                <input type="number" class="form-control" name="telefone" placeholder="Telefone">
   	  </div>
           <div class="form-group col-md-4">
   	  	<label for="renda">Renda</label>
-                <input type="number" class="form-control" id="renda" placeholder="Renda">
+                <input type="number" class="form-control" name="renda" placeholder="Renda">
   	  </div>
-          <!-- data cadastro e endereço_id -->
+          <!-- **Perguntar**data cadastro e endereço_id -->
 	</div>
 	
 	<hr>

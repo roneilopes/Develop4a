@@ -1,8 +1,8 @@
 <div id="main" class="container-fluid">
   
-  <h3 class="page-header">Adicionar Funcionários'</h3>
+  <h3 class="page-header">Adicionar Pedidos'</h3>
   
-  <form action="<?= base_url('pedidos/edit')?>" method="post">
+  <form action="<?= base_url('pedidos/add')?>" method="post">
       
   	<div class="row">
   	  <div class="form-group col-md-4">

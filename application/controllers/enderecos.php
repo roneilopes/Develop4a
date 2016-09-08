@@ -15,6 +15,7 @@ class Enderecos extends Controller {
         if(isset ($_POST['submit'])){
             $novo = $this->post_to_obj(array('cep','logradouro','bairro','cidade','estado'), new Endereco());
             $novo->save();
+            $this->render('enderecos/index');
         }else{
             $this->render('enderecos/add');
         }

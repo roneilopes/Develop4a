@@ -2,7 +2,7 @@
   
   <h3 class="page-header">Adicionar Endereço</h3>
   
-  <form action="<?= base_url('add')?>" method="post">
+  <form action="<?= base_url('enderecos/add')?>" method="post">
   	<div class="row">
 	  <div class="form-group col-md-4">
   	  	<label for="cep">Cep</label>
@@ -24,8 +24,7 @@
   	  	<label for="estado">Estado</label>
                 <input type="text" class="form-control" name="estado" placeholder="Estado">
   	  </div>
-          <!-- data cadastro e endereço_id -->
-	</div>
+        </div>
 	
 	<hr>
 	
