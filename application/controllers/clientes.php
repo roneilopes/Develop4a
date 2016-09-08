@@ -13,7 +13,7 @@ class Clientes extends Controller {
 
     public function add() {
         if(isset ($_POST['submit'])){
-            $novo = $this->post_to_obj(array('nome','cpf','telefone','renda','data_nascimento'), new Cliente());
+            $novo = $this->post_to_obj(array('nome','cpf','telefone','renda','data_nascimento','endereco_id'), new Cliente());
             $novo->save();
         }else{
             $this->render('clientes/add');
