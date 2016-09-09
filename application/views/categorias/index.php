@@ -36,22 +36,15 @@
 				</tr>
 			</thead>
 			<tbody>
-				<?php
-                                $i=0;
-                                        while ($i <= ($valores[$i]['id'])){
-                                            try {
-                                                echo "<tr><td>{$valores[$i]['id']}</td>";
-                                                echo "<td>{$valores[$i]['nome']}</td>"
-                                                . "<td class='actions'>
-                                                <a class='btn btn-warning btn-xs' href=". base_url('categorias/edit').">Editar</a>
-                                                <a class='btn btn-danger btn-xs'  href='#' data-toggle='modal' data-target='#delete-modal'>Excluir</a></td>"
-                                                . "</tr>";
-                                                $i++;
-                                            } catch (Exception $ex) {
-                                                return base_url('categorias');
-                                            }
-                                        }
-                                ?>
+                            <?php foreach ($valores as $i){?>
+                            <tr><td><?= $i['id']?></td>
+                            <td><?= $i['nome']?></td>
+                            <td class="actions">
+                            <a class="btn btn-warning btn-xs" href="<?=base_url('categorias/edit')?>">Editar</a>
+                            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                            </td>
+                            </tr>
+                            <?php }?>
 			</tbody>
                         
 				

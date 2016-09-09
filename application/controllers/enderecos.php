@@ -11,7 +11,6 @@ class Enderecos extends Controller {
         $end = new Endereco();
         $end->get();
         $this->data['valores'] = $end->all_to_array();
-        $this->view('enderecos/index', $this->data);
         $this->render('enderecos/index');
     }
 
@@ -19,7 +18,7 @@ class Enderecos extends Controller {
         if(isset ($_POST['submit'])){
             $novo = $this->post_to_obj(array('cep','logradouro','bairro','cidade','estado'), new Endereco());
             $novo->save();
-            $this->index();
+            redirect('enderecos');
         }else{
             $this->render('enderecos/add');
         }

@@ -42,26 +42,18 @@
 				</tr>
 			</thead>
 			<tbody>
-                                    <?php 
-                                        $i=0;
-                                        while ($i <= ($valores[$i]['id'])){
-                                            try {
-                                                echo "<tr><td>{$valores[$i]['id']}</td>";
-                                                echo "<td>{$valores[$i]['cep']}</td>";
-                                                echo "<td>{$valores[$i]['logradouro']}</td>";
-                                                echo "<td>{$valores[$i]['bairro']}</td>";
-                                                echo "<td>{$valores[$i]['cidade']}</td>";
-                                                echo "<td>{$valores[$i]['estado']}</td>"
-                                                        . "<td class='actions'>
-                                                        <a class='btn btn-warning btn-xs' href=". base_url('enderecos/edit').">Editar</a>
-                                                        <a class='btn btn-danger btn-xs'  href='#' data-toggle='modal' data-target='#delete-modal'>Excluir</a></td>"
-                                                        . "</tr>";
-                                                $i++;
-                                            } catch (Exception $ex) {
-                                                return base_url('enderecos');
-                                            }
-                                        }
-                                        ?>
+                            <?php foreach ($valores as $i){?>
+                            <tr><td><?= $i['id']?></td>
+                            <td><?= $i['logradouro']?></td>
+                            <td><?= $i['bairro']?></td>
+                            <td><?= $i['cidade']?></td>
+                            <td><?= $i['estado']?></td>
+                            <td class="actions">
+                            <a class="btn btn-warning btn-xs" href="<?=base_url('enderecos/edit')?>">Editar</a>
+                            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                            </td>
+                            </tr>
+                            <?php }?>
 			</tbody>
 		</table>
 	</div>

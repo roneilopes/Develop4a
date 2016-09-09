@@ -6,10 +6,6 @@
     <form action="<?= base_url('usuarios/add') ?>" method="post">
         <div class="row">
             <div class="form-group col-md-4">
-                <label for="id">ID</label>
-                <input type="text" name="nome" class="form-control" id="id" placeholder="Digite o ID">
-            </div>
-            <div class="form-group col-md-4">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" class="form-control" id="nome" placeholder="Digite o nome">
             </div>

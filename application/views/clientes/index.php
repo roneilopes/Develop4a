@@ -41,25 +41,18 @@
 				</tr>
 			</thead>
 			<tbody>
-                            <?php
-                            $i = 0;
-                            while ($i <= ($valores[$i]['id'])) {
-                                try {
-                                    echo "<tr><td>{$valores[$i]['id']}</td>";
-                                    echo "<td>{$valores[$i]['nome']}</td>";
-                                    echo "<td>{$valores[$i]['cpf']}</td>";
-                                    echo "<td>{$valores[$i]['telefone']}</td>";
-                                    echo "<td>{$valores[$i]['renda']}</td>"
-                                    . "<td class='actions'>
-                                                        <a class='btn btn-warning btn-xs' href=" . base_url('clientes/edit') . ">Editar</a>
-                                                        <a class='btn btn-danger btn-xs'  href='#' data-toggle='modal' data-target='#delete-modal'>Excluir</a></td>"
-                                    . "</tr>";
-                                    $i++;
-                                } catch (Exception $ex) {
-                                    return base_url('clientes');
-                                }
-                            }
-                            ?>
+                            <?php foreach ($valores as $i){?>
+                            <tr><td><?= $i['id']?></td>
+                            <td><?= $i['nome']?></td>
+                            <td><?= $i['cpf']?></td>
+                            <td><?= $i['telefone']?></td>
+                            <td><?= $i['renda']?></td>
+                            <td class="actions">
+                            <a class="btn btn-warning btn-xs" href="<?=base_url('cargos/edit')?>">Editar</a>
+                            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                            </td>
+                            </tr>
+                            <?php }?>
 			</tbody>
 		</table>
 	</div>

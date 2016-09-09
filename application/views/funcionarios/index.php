@@ -41,19 +41,17 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td>1001</td>
-					<td></td>
-					<td></td>
-                                        <td></td>
-                                        <td class="actions">
-						<a class="btn btn-warning btn-xs" href="<?= base_url('funcionarios/edit')?>">Editar</a>
-						<a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
-						
-					</td>
-				</tr>
-				
-				
+                            <?php foreach ($valores as $i){?>
+                            <tr><td><?= $i['id']?></td>
+                            <td><?= $i['nome']?></td>
+                            <td><?= $i['entrada']?></td>
+                            <td><?= $i['telefone']?></td>
+                            <td class="actions">
+                            <a class="btn btn-warning btn-xs" href="<?=base_url('funcionarios/edit')?>">Editar</a>
+                            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                            </td>
+                            </tr>
+                            <?php }?>
 			</tbody>
 		</table>
 	</div>

@@ -8,6 +8,10 @@ class Funcionarios extends Controller {
     }
 
     public function index() {
+        $fun = new Funcionario();
+        $fun->get();
+        $fun->recursiveGet();
+        $this->data['valores'] = $fun->all_to_array();
         $this->render('funcionarios/index');
     }
 
