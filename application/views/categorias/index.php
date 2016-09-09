@@ -38,7 +38,7 @@
 			<tbody>
 				<?php
                                 $i=0;
-                                        while ($i <= count($valores[$i]['id'])){
+                                        while ($i <= ($valores[$i]['id'])){
                                             try {
                                                 echo "<tr><td>{$valores[$i]['id']}</td>";
                                                 echo "<td>{$valores[$i]['nome']}</td>"
