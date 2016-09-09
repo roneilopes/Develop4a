@@ -13,7 +13,7 @@ class Clientes extends Controller {
         //print_r($cli->to_array()).'<br><br>';
         //print_r($cli->all_to_array());
         $this->data['valores'] = $cli->all_to_array();
-        $this->view('index', $this->data['valores']);
+        $this->view('clientes/index', $this->data['valores']);
         //$this->data['valores'] = "all_to_array";
         //var_dump($cli->all_to_array());
         $this->render('clientes/index');

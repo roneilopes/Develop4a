@@ -42,21 +42,26 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td><?php echo $valores[0]['id']; ?></td>
-					<td><?php echo $valores[0]['cep']; ?></td>
-					<td><?php echo $valores[0]['logradouro']; ?></td>
-					<td><?php echo $valores[0]['bairro']; ?></td>
-					<td><?php echo $valores[0]['cidade']; ?></td>
-					<td><?php echo $valores[0]['estado']; ?></td>
-					<td class="actions">
-						<a class="btn btn-warning btn-xs" href="<?= base_url('enderecos/edit')?>">Editar</a>
-						<a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
-						
-					</td>
-				</tr>
-				
-				
+                                    <?php 
+                                        $i=0;
+                                        while ($i <= count($valores[$i]['id'])){
+                                            try {
+                                                echo "<tr><td>{$valores[$i]['id']}</td>";
+                                                echo "<td>{$valores[$i]['cep']}</td>";
+                                                echo "<td>{$valores[$i]['logradouro']}</td>";
+                                                echo "<td>{$valores[$i]['bairro']}</td>";
+                                                echo "<td>{$valores[$i]['cidade']}</td>";
+                                                echo "<td>{$valores[$i]['estado']}</td>"
+                                                        . "<td class='actions'>
+                                                        <a class='btn btn-warning btn-xs' href=". base_url('enderecos/edit').">Editar</a>
+                                                        <a class='btn btn-danger btn-xs'  href='#' data-toggle='modal' data-target='#delete-modal'>Excluir</a></td>"
+                                                        . "</tr>";
+                                                $i++;
+                                            } catch (Exception $ex) {
+                                                return base_url('enderecos');
+                                            }
+                                        }
+                                        ?>
 			</tbody>
 		</table>
 	</div>
