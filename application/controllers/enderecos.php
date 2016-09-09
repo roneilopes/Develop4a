@@ -10,15 +10,8 @@ class Enderecos extends Controller {
     public function index() {
         $cli = new Endereco();
         $cli->get();
-        //print_r($cli->to_array()).'<br><br>';
-        //print_r($cli->all_to_array());
         $this->data['valores'] = $cli->all_to_array();
         $this->view('enderecos/index', $this->data);
-        //$this->data['valores'] = "all_to_array";
-        //print_r($this->data['valores']);
-        $val = array();
-        $val = $this->data['valores'];
-        
         $this->render('enderecos/index');
     }
 

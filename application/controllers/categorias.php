@@ -8,6 +8,10 @@ class Categorias extends Controller {
     }
 
     public function index() {
+        $cat = new Categoria();
+        $cat->get();
+        $this->data['valores'] = $cat->all_to_array();
+        $this->view('categorias/index', $this->data);
         $this->render('categorias/index');
     }
     
@@ -22,7 +26,13 @@ class Categorias extends Controller {
     }
     
     public function edit(){
-         $this->render('categorias/edit');
+        if(isset($_POST['submit'])){
+            $novo = $this->post_to_obj(array('nome'), new Categoria());
+            $novo->update();
+            $this->render('categoria/index');
+        }else{
+            $this->render('categoria/edit');
+        }
     }
 
 }
