@@ -30,8 +30,7 @@
                     $i = 0;
                     while ($i <= ($dadosEnd[$i]['id'])) {
                         try {
-                            $idEnd = $dadosEnd[$i]['id'];
-                            echo "<option value='$idEnd'> Bairro: {$dadosEnd[$i]['bairro']} - CEP: {$dadosEnd[$i]['cep']} </option>";
+                            echo "<option value='".$dadosEnd[$i]['id']."'> Bairro: {$dadosEnd[$i]['bairro']} - CEP: {$dadosEnd[$i]['cep']} </option>";
                             $i++;
                         } catch (Exception $ex) {
                             return $ex->getMessage();

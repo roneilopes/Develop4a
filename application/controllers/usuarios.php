@@ -11,7 +11,6 @@ class Usuarios extends Controller {
         $usua = new Usuario();
         $usua->get();
         $this->data['valores'] = $usua->all_to_array();
-        $this->view('usuarios/index', $this->data); 
         $this->render('usuarios/index');
     }
 
@@ -19,7 +18,7 @@ class Usuarios extends Controller {
         if(isset ($_POST['submit'])){
             $novo = $this->post_to_obj(array('nome','sobrenome','login','senha','grupo'), new Usuario());
             $novo->save();
-            $this->index();
+            redirect('usuarios');
         }else{
             $this->render('usuarios/add');
         }

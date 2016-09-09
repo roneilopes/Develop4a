@@ -31,9 +31,6 @@
 			<thead>
 				<tr>
 					<th>ID</th>
-					<th>Funcionário</th>
-                                        <th>Cliente</th>
-					<th>Data de cadastro</th>
                
                                         <th class="actions">Ações</th>
                                         
