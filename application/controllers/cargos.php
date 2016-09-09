@@ -8,6 +8,10 @@ class Cargos extends Controller {
     }
 
     public function index() {
+        $car = new Cargo();
+        $car->get();
+        $this->data['valores'] = $car->all_to_array();
+        $this->view('cargos/index', $this->data);        
         $this->render('cargos/index');
     }
     
@@ -15,13 +19,20 @@ class Cargos extends Controller {
         if(isset ($_POST['submit'])){
             $novo = $this->post_to_obj(array('descricao','salario'), new Cargo());
             $novo->save();
-            $this->render('cargos/index');
+            $this->index();
         }else{
             $this->render('cargos/add');
         }
     }
     
     public function edit(){
+         if(isset ($_POST['submit'])){
+            $novo = $this->post_to_obj(array('descricao','salario'), new Cargo());
+            $novo->update();
+            $this->index();
+        }else{
+            $this->render('cargos/add');
+        }
          $this->render('cargos/edit');
     }
 

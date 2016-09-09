@@ -30,23 +30,33 @@
 			<thead>
 				<tr>
 					<th>ID</th>
-					<th>Header 1</th>
-					<th>Header 2</th>
-					<th>Header 3</th>
+					<th>Nome</th>
+					<th>Sobrenome</th>
+					<th>Login</th>
+					<th>Grupo</th>
 					<th class="actions">Ações</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td>1001</td>
-					<td>Lorem ipsum dolor sit amet, consectetur adipiscing</td>
-					<td>Jes</td>
-					<td>01/01/2015</td>
-					<td class="actions">
-						<a class="btn btn-warning btn-xs" href="<?= base_url('usuarios/edit') ?>">Editar</a>
-						<a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
-					</td>
-				</tr>
+                            <?php
+                            $i = 0;
+                            while ($i <= ($valores[$i]['id'])) {
+                                try {
+                                    echo "<tr><td>{$valores[$i]['id']}</td>";
+                                    echo "<td>{$valores[$i]['nome']}</td>";
+                                    echo "<td>{$valores[$i]['sobrenome']}</td>";
+                                    echo "<td>{$valores[$i]['login']}</td>";
+                                    echo "<td>{$valores[$i]['grupo']}</td>"
+                                    . "<td class='actions'>
+                                                        <a class='btn btn-warning btn-xs' href=" . base_url('usuarios/edit') . ">Editar</a>
+                                                        <a class='btn btn-danger btn-xs'  href='#' data-toggle='modal' data-target='#delete-modal'>Excluir</a></td>"
+                                    . "</tr>";
+                                    $i++;
+                                } catch (Exception $ex) {
+                                    return base_url('usuarios');
+                                }
+                            }
+                            ?>
 			</tbody>
 		</table>
 	</div>

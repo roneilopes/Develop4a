@@ -7,7 +7,7 @@
                 <!-- pesquisa -->
 		<div class="col-sm-6">
 			<div class="input-group h2">
-				<input name="data[search]" class="form-control" id="search" type="text" placeholder="Pesquisar endereço">
+				<input name="data[search]" class="form-control" id="search" type="text" placeholder="Pesquisar Endereço">
 				<span class="input-group-btn">
 					<button class="btn btn-primary" type="submit">
 						<span class="glyphicon glyphicon-search"></span>
@@ -44,7 +44,7 @@
 			<tbody>
                                     <?php 
                                         $i=0;
-                                        while ($i <= count($valores[$i]['id'])){
+                                        while ($i <= ($valores[$i]['id'])){
                                             try {
                                                 echo "<tr><td>{$valores[$i]['id']}</td>";
                                                 echo "<td>{$valores[$i]['cep']}</td>";

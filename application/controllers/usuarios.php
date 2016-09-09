@@ -8,6 +8,10 @@ class Usuarios extends Controller {
     }
 
     public function index() {
+        $usua = new Usuario();
+        $usua->get();
+        $this->data['valores'] = $usua->all_to_array();
+        $this->view('usuarios/index', $this->data); 
         $this->render('usuarios/index');
     }
 
@@ -15,13 +19,20 @@ class Usuarios extends Controller {
         if(isset ($_POST['submit'])){
             $novo = $this->post_to_obj(array('nome','sobrenome','login','senha','grupo'), new Usuario());
             $novo->save();
-            $this->render('usuarios/index');
+            $this->index();
         }else{
             $this->render('usuarios/add');
         }
     }
     
     public function edit() {
+        if(isset ($_POST['submit'])){
+            $novo = $this->post_to_obj(array('nome','sobrenome','login','senha','grupo'), new Usuario());
+            $novo->update();
+            $this->render('usuarios/index');
+        }else{
+            $this->render('usuarios/add');
+        }
     }
 }
 ?>

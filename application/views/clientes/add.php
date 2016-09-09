@@ -25,10 +25,19 @@
                 <label for="endereco">Endereco</label>
                 <select name="endereco_id" id="endereco" class="form-control" placeholder="Selecione">
                     <option> Selecione</option>
-                    <option value="gerente" ><? ?></option>
-                    <option value="financa" > Financeiro</option>
-                    <option value="diretor" > Diretoria</option>
-                    <option value="ti" > Informática</option>
+                    <?php
+                    //$_POST['data_cadastro'] =  strtotime(date('d/m/Y'));
+                    $i = 0;
+                    while ($i <= ($dadosEnd[$i]['id'])) {
+                        try {
+                            $idEnd = $dadosEnd[$i]['id'];
+                            echo "<option value='$idEnd'> Bairro: {$dadosEnd[$i]['bairro']} - CEP: {$dadosEnd[$i]['cep']} </option>";
+                            $i++;
+                        } catch (Exception $ex) {
+                            return $ex->getMessage();
+                        }
+                    }
+                    ?>
                 </select>
             </div>
           </div>

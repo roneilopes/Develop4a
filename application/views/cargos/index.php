@@ -7,7 +7,7 @@
                 <!-- pesquisa -->
 		<div class="col-sm-6">
 			<div class="input-group h2">
-				<input name="data[search]" class="form-control" id="search" type="text" placeholder="Pesquisar Itens">
+				<input name="data[search]" class="form-control" id="search" type="text" placeholder="Pesquisar Cargo">
 				<span class="input-group-btn">
 					<button class="btn btn-primary" type="submit">
 						<span class="glyphicon glyphicon-search"></span>
@@ -37,18 +37,23 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td>1001</td>
-					<td>Lorem ipsum dolor sit amet, consectetur adipiscing</td>
-					<td>Jes</td>
-					<td class="actions">
-						<a class="btn btn-warning btn-xs" href="<?= base_url('cargos/edit')?>">Editar</a>
-						<a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
-						
-					</td>
-				</tr>
-				
-				
+                            <?php
+                            $i = 0;
+                            while ($i <= ($valores[$i]['id'])) {
+                                try {
+                                    echo "<tr><td>{$valores[$i]['id']}</td>";
+                                    echo "<td>{$valores[$i]['descricao']}</td>";
+                                    echo "<td>{$valores[$i]['salario']}</td>"
+                                    . "<td class='actions'>
+                                                        <a class='btn btn-warning btn-xs' href=" . base_url('cargos/edit') . ">Editar</a>
+                                                        <a class='btn btn-danger btn-xs'  href='#' data-toggle='modal' data-target='#delete-modal'>Excluir</a></td>"
+                                    . "</tr>";
+                                    $i++;
+                                } catch (Exception $ex) {
+                                    return base_url('cargos');
+                                }
+                            }
+                            ?>
 			</tbody>
 		</table>
 	</div>
