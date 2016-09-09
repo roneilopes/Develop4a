@@ -45,6 +45,7 @@
                                     echo "<td>{$valores[$i]['descricao']}</td>";
                                     echo "<td>{$valores[$i]['salario']}</td>"
                                     . "<td class='actions'>
+                                                        <a class='btn btn-success btn-xs'  href='#' data-toggle='modal' data-target='#delete-modal'>Visualizar</a>
                                                         <a class='btn btn-warning btn-xs' href=" . base_url('cargos/edit') . ">Editar</a>
                                                         <a class='btn btn-danger btn-xs'  href='#' data-toggle='modal' data-target='#delete-modal'>Excluir</a></td>"
                                     . "</tr>";

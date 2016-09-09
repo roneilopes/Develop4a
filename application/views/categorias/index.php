@@ -43,6 +43,7 @@
                                                 echo "<tr><td>{$valores[$i]['id']}</td>";
                                                 echo "<td>{$valores[$i]['nome']}</td>"
                                                 . "<td class='actions'>
+                                                <a class='btn btn-success btn-xs'  href='#' data-toggle='modal' data-target='#delete-modal'>Visualizar</a>
                                                 <a class='btn btn-warning btn-xs' href=". base_url('categorias/edit').">Editar</a>
                                                 <a class='btn btn-danger btn-xs'  href='#' data-toggle='modal' data-target='#delete-modal'>Excluir</a></td>"
                                                 . "</tr>";

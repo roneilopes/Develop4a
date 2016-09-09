@@ -51,9 +51,10 @@
                                                 echo "<td>{$valores[$i]['nome']}</td>";
                                                 echo "<td>{$valores[$i]['entrada']}</td>";
                                                 echo "<td>{$valores[$i]['telefone']}</td>";
-                                                echo "<td>{$dadosCargo[$i]['cargo_id']}</td>";
-                                                echo "<td>{$dadosEnd[$i]['endereco_id']}</td>"
+                                                echo "<td>{$valores[$i]['cargo_id']}</td>";
+                                                echo "<td>{$valores[$i]['endereco_id']}</td>"
                                                         . "<td class='actions'>
+                                                        <a class='btn btn-success btn-xs'  href='#' data-toggle='modal' data-target='#delete-modal'>Visualizar</a>
                                                         <a class='btn btn-warning btn-xs' href=". base_url('funcionarios/edit').">Editar</a>
                                                         <a class='btn btn-danger btn-xs'  href='#' data-toggle='modal' data-target='#delete-modal'>Excluir</a></td>"
                                                         . "</tr>";
