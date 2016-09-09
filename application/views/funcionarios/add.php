@@ -46,7 +46,6 @@
                         <select name="endereco_id" id="endereco" class="form-control">
                             <option value="" disabled selected>Selecione o endereço</option>
                             <?php
-                                //$_POST['data_cadastro'] =  strtotime(date('d/m/Y'));
                                 $i = 0;
                                 while ($i <= ($dadosEnd[$i]['id'])) {
                                     try {

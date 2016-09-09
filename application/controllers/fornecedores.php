@@ -11,7 +11,6 @@ class Fornecedores extends Controller {
         $for = new Fornecedor();
         $for->get();
         $this->data['valores'] = $for->all_to_array();
-        $this->view('fornecedores/index', $this->data);
         $this->render('fornecedores/index');
     }
     
@@ -20,7 +19,7 @@ class Fornecedores extends Controller {
             // FALTA ENDERECO ID
             $novo = $this->post_to_obj(array('nome','cnpj','telefone','endereco_id'), new Fornecedor());
             $novo->save();
-            $this->index();
+            redirect('fornecedores');
         }else{
             $this->render('fornecedores/add');
         }

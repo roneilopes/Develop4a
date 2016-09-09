@@ -21,12 +21,11 @@ class Funcionarios extends Controller {
         $cargo->get();
         $this->data['dadosCargo'] = $cargo->all_to_array();
         
-        $this->view('funcionarios/add', $this->data);
         
         if(isset ($_POST['submit'])){
             $novo = $this->post_to_obj(array('nome','entrada','telefone','cargo_id','endereco_id'), new Funcionario());
             $novo->save();
-            $this->index();
+            redirect('funcionarios');
         }else{
             $this->render('funcionarios/add');
         }
@@ -35,5 +34,7 @@ class Funcionarios extends Controller {
     public function edit(){
          $this->render('funcionarios/edit');
     }
+    
+    
 }
 ?>
