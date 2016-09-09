@@ -41,6 +41,7 @@
 				</tr>
 			</thead>
 			<tbody>
+<<<<<<< HEAD
                               <?php
                                 $i=0;
                                         while ($i <= ($valores[$i]['id'])){
@@ -61,6 +62,19 @@
                                         }
                                 ?>
 
+=======
+                            <?php foreach ($valores as $i){?>
+                            <tr><td><?= $i['id']?></td>
+                            <td><?= $i['nome']?></td>
+                            <td><?= $i['cnpj']?></td>
+                            <td><?= $i['telefone']?></td>
+                            <td class="actions">
+                            <a class="btn btn-warning btn-xs" href="<?=base_url('fornecedores/edit')?>">Editar</a>
+                            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                            </td>
+                            </tr>
+                            <?php }?>
+>>>>>>> e080ba900e7026e942bdb175fe159bbc06d0e726
 			</tbody>
 		</table>
 	</div>

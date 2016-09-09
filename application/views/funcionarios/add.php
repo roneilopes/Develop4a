@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="form-group col-md-4">
                     <label for="cargo">Cargo</label>
-                        <select name="cargo" id="cargo" class="form-control">
+                        <select name="cargo_id" id="cargo" class="form-control">
                             <option value="" disabled selected>Selecione o cargo</option>
                             <?php
                                 $i = 0;
@@ -49,8 +49,7 @@
                                 $i = 0;
                                 while ($i <= ($dadosEnd[$i]['id'])) {
                                     try {
-                                        $idEnd = $dadosEnd[$i]['id'];
-                                        echo "<option value='$idEnd'> Bairro: {$dadosEnd[$i]['bairro']} - CEP: {$dadosEnd[$i]['cep']} </option>";
+                                        echo "<option value='".$dadosEnd[$i]['id']."'> Bairro: {$dadosEnd[$i]['bairro']} - CEP: {$dadosEnd[$i]['cep']} </option>";
                                         $i++;
                                     } catch (Exception $ex) {
                                         return $ex->getMessage();

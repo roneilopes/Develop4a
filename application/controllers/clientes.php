@@ -21,6 +21,7 @@ class Clientes extends Controller {
         $this->view('clientes/add', $this->data);
         if(isset ($_POST['submit'])){
             $novo = $this->post_to_obj(array('nome','cpf','telefone','renda','endereco_id'), new Cliente());
+            $novo->data_cadastro = date('Y/m/d H:i:s');
             $novo->save();
             redirect('clientes');
         }else{
