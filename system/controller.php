@@ -3,10 +3,12 @@
 class Controller{
 
 	protected $load;
+	protected $cobj;
 	public $data = array();
 
 	function __construct(){
 		$this->load = new Loader();
+		$this->cobj = new Cargo();
 	}
 
 	protected function view($file, Array $vars = null){
