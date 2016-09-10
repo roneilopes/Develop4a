@@ -10,11 +10,12 @@ class Cargos extends Controller {
     public function index() {
         $car = new Cargo();
         $car->get();
-        $this->data['valores'] = $car->all_to_array();       
+        $this->data['valores'] = $car->all_to_array();  
         $this->render('cargos/index');
     }
     
     public function add(){
+        
         if(isset ($_POST['submit'])){
             $novo = $this->post_to_obj(array('descricao','salario'), new Cargo());
             $novo->save();
@@ -24,24 +25,33 @@ class Cargos extends Controller {
         }
     }
     
-    public function edit(){
-         if(isset ($_POST['submit'])){
-            $novo = $this->post_to_obj(array('descricao','salario'), new Cargo());
-            $novo->update();
-            $this->index();
-        }else{
-            $this->render('cargos/add');
+    public function edit($id){
+        
+        if(isset ($_POST['submit'])){
+            $nobj = $this->post_to_obj(array('descricao','salario'), new Cargo());
+            $nobj->save();
+            redirect('cargos');
         }
-         $this->render('cargos/edit');
+        
+        $carg = new Cargo();
+        $carg->get();
+        $this->data['dadosCargo'] = $carg->all_to_array();
+        $this->cobj->getById($id);
+        $this->data['edit_user'] = $this->cobj->to_array();
+        $this->render('cargos/edit');
     }
     
     public function mostrar($id) {
         
+        $carg = new Cargo();
+        $carg->get();
+        //print_r($carg);
+        $this->data['dadosCargo'] = $carg->all_to_array();
         $this->cobj->getById($id);
+        $this->data['edit_user'] = $this->cobj->to_array();
         
-        print_r($this->cobj);
         $this->render('cargos/mostrar');
-        
+
     }
 }
 

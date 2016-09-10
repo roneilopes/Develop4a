@@ -2,19 +2,22 @@
   
   <h3 class="page-header">Editar Cargo</h3>
   
-  <form action="<?= base_url('edit')?>" method="post">
+  <form action="<?= base_url('cargos/edit')?>" method="post">
   	<div class="row">
+            
   	  <div class="form-group col-md-4">
   	  	<label for="id">ID</label>
-                <input type="number" class="form-control" id="id" placeholder="Id">
+                <input type="number" class="form-control" id="id" value="<?=$edit_user['id']?>">
   	  </div>
+            
 	  <div class="form-group col-md-4">
   	  	<label for="descricao">Descrição</label>
-                <input type="text" class="form-control" id="descricao" placeholder="Descrição">
+                <input type="text" class="form-control" id="descricao" value="<?=$edit_user['descricao']?>">
   	  </div>
+            
 	  <div class="form-group col-md-4">
   	  	<label for="salario">Salário</label>
-                <input type="number" class="form-control" id="salario" placeholder="Salário">
+                <input type="number" class="form-control" id="salario" value="<?=$edit_user['salario']?>" >
   	  </div>
 	</div>
 	

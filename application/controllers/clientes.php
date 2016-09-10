@@ -15,10 +15,12 @@ class Clientes extends Controller {
     }
 
     public function add() {
+        
         $end = new Endereco();
         $end->get();
         $this->data['dadosEnd'] = $end->all_to_array();
         $this->view('clientes/add', $this->data);
+        
         if(isset ($_POST['submit'])){
             $novo = $this->post_to_obj(array('nome','cpf','telefone','renda','endereco_id'), new Cliente());
             $novo->data_cadastro = date('Y/m/d H:i:s');
@@ -68,5 +70,7 @@ class Clientes extends Controller {
         
         $this->render('clientes/mostrar');
     }
+    
+    
 }
 ?>

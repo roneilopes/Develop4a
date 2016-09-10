@@ -5,6 +5,7 @@ class Controller{
 	protected $load;
 
 	protected $clobj;
+        
 	public $data = array();
 
 	function __construct(){
