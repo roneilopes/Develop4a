@@ -27,7 +27,7 @@ class Pedidos extends Controller {
             $novo = $this->post_to_obj(array('funcionario_id','cliente_id'), new Pedido());
             $novo->data_cadastro = date('Y-m-d H:i:s');
             $novo->save();
-            $this->render('pedidos/index');
+            redirect('pedidos');
         }else{
             $this->render('pedidos/add');
         }

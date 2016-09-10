@@ -38,25 +38,18 @@
 				</tr>
 			</thead>
 			<tbody>
-                            <?php
-                            $i = 0;
-                            while ($i <= ($valores[$i]['id'])) {
-                                try {
-                                    echo "<tr><td>{$valores[$i]['id']}</td>";
-                                    echo "<td>{$valores[$i]['nome']}</td>";
-                                    echo "<td>{$valores[$i]['sobrenome']}</td>";
-                                    echo "<td>{$valores[$i]['login']}</td>";
-                                    echo "<td>{$valores[$i]['grupo']}</td>"
-                                    . "<td class='actions'>
-                                                        <a class='btn btn-warning btn-xs' href=" . base_url('usuarios/edit') . ">Editar</a>
-                                                        <a class='btn btn-danger btn-xs'  href='#' data-toggle='modal' data-target='#delete-modal'>Excluir</a></td>"
-                                    . "</tr>";
-                                    $i++;
-                                } catch (Exception $ex) {
-                                    return base_url('usuarios');
-                                }
-                            }
-                            ?>
+                            <?php foreach ($valores as $i){?>
+                            <tr><td><?= $i['id']?></td>
+                            <td><?= $i['nome']?></td>
+                            <td><?= $i['sobrenome']?></td>
+                            <td><?= $i['login']?></td>
+                            <td><?= $i['grupo']?></td>
+                            <td class="actions">
+                            <a class="btn btn-warning btn-xs" href="<?=base_url('usuarios/edit')?>">Editar</a>
+                            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                            </td>
+                            </tr>
+                            <?php }?>
 			</tbody>
 		</table>
 	</div>
