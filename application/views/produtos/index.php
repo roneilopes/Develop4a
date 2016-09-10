@@ -32,8 +32,6 @@
 				<tr>
 					<th>ID</th>
 					<th>Descrição</th>
-                                        <th>Fornecedor</th>
-					<th>Categoria</th>
                                         <th>Quantidade</th>
                                         <th>Valor</th>
                
@@ -43,22 +41,17 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td class="actions">
-                                                <a class='btn btn-success btn-xs'  href='#' data-toggle='modal' data-target='#delete-modal'>Visualizar</a>
-						<a class="btn btn-warning btn-xs" href="<?= base_url('produtos/edit')?>">Editar</a>
-						<a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
-						
-					</td>
-				</tr>
-				
-				
+                            <?php foreach ($valores as $i){?>
+                            <tr><td><?= $i['id']?></td>
+                            <td><?= $i['descricao']?></td>
+                            <td><?= $i['quantidade']?></td>
+                            <td><?= $i['valor']?></td>
+                            <td class="actions">
+                            <a class="btn btn-warning btn-xs" href="<?=base_url('produtos/edit')?>">Editar</a>
+                            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                            </td>
+                            </tr>
+                            <?php }?>
 			</tbody>
 		</table>
 	</div>

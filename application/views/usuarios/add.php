@@ -29,11 +29,11 @@
             <div class="form-group col-md-4">
                 <label for="grupo">Grupo</label>
                 <select name="grupo" id="grupo" class="form-control" placeholder="Selecione">
-                    <option> Selecione</option>
-                    <option value="gerente" > Gerencia</option>
-                    <option value="financa" > Financeiro</option>
-                    <option value="diretor" > Diretoria</option>
-                    <option value="ti" > Informática</option>
+                    <option disabled selected> Selecione</option>
+                    <option value="Gerencia" > Gerencia</option>
+                    <option value="Financeiro" > Financeiro</option>
+                    <option value="Diretoria" > Diretoria</option>
+                    <option value="Informática" > Informática</option>
                 </select>
             </div>
         </div>
