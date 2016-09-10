@@ -44,5 +44,29 @@ class Clientes extends Controller {
             //var_dump($this->cliobj);
             $this->render('clientes/edit');
     }
+    
+    public function mostrar($id) {
+        
+        // CLIENTES
+        
+        $cli = new Cliente();
+        $cli->get();
+        $this->data['dadosCli'] = $cli->all_to_array();
+        $this->cliobj->getById($id);
+        $this->data['edit_user'] = $this->cliobj->to_array();
+        
+        
+        // ENDEREÇOS
+      
+        $end = new Endereco();
+        $end->get();
+        $this->data['dadosEnd'] = $end->all_to_array();
+        $this->cliobj->getById($id);
+        $this->data['edit_user'] = $this->cliobj->to_array();
+        
+        // CHAMA PAGINA
+        
+        $this->render('clientes/mostrar');
+    }
 }
 ?>

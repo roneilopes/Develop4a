@@ -4,26 +4,26 @@
     <form action="<?=base_url('clientes/edit')?>" method="post">
         <div class="row">
             <div class="form-group col-md-4">
-                <label for="exampleInputEmail1">Nome</label>
-                <input type="text" name="nome" class="form-control" id="exampleInputEmail1" placeholder="Digite o valor" value="<?=$edit_user['nome']?>">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" class="form-control" id="nome"  value="<?=$edit_user['nome']?>">
             </div>
         </div>
         <div class="row">
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">CPF</label>
-                <input type="text" name="cpf" class="form-control" id="exampleInputEmail1" placeholder="Digite o valor" value="<?=$edit_user['cpf']?>">
+                <input type="text" name="cpf" class="form-control" id="exampleInputEmail1"  value="<?=$edit_user['cpf']?>">
             </div>
         </div>
         <div class="row">
             <div class="form-group col-md-4">
                 <label for="exampleInputEmail1">Telefone</label>
-                <input type="text" name="telefone" class="form-control" id="exampleInputEmail1" placeholder="Digite o valor" value="<?=$edit_user['telefone']?>">
+                <input type="text" name="telefone" class="form-control" id="exampleInputEmail1"  value="<?=$edit_user['telefone']?>">
             </div>
         </div>
         <div class="row">
             <div class="form-group col-md-4">
-                <label for="exampleInputEmail1">Renda</label>
-                <input type="number" name="renda" class="form-control" id="exampleInputEmail1" placeholder="Digite o valor" value="<?=$edit_user['renda']?>">
+                <label for="renda">Renda</label>
+                <input type="number" name="renda" class="form-control" id="renda"  value="<?= $edit_user['renda'] ?>">
             </div>
         </div>
         <div class="row">
