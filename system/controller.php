@@ -3,10 +3,12 @@
 class Controller{
 
 	protected $load;
+	protected $clobj;
 	public $data = array();
 
 	function __construct(){
 		$this->load = new Loader();
+		$this->cliobj = new Cliente();
 	}
 
 	protected function view($file, Array $vars = null){

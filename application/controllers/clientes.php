@@ -29,14 +29,20 @@ class Clientes extends Controller {
         }
     }
 
-    public function edit() {
-        if(isset ($_POST['submit'])){
-            $novo = $this->post_to_obj(array('nome','cpf','telefone','renda','data_cadastro','endereco_id'), new Cliente());
-            $novo->update();
-            $this->index();
-        }else{
+    public function edit($id){
+            if(isset($_POST['submit'])){
+                $nobj = $this->post_to_obj(array('nome','cpf','telefone','renda','endereco_id'), new Cliente());
+                $nobj->save();
+                #print_r($nobj);exit;
+                redirect('clientes');
+            }
+            $end = new Endereco();
+            $end->get();
+            $this->data['dadosEnd'] = $end->all_to_array();
+            $this->cliobj->getById($id);
+            $this->data['edit_user'] = $this->cliobj->to_array();
+            //var_dump($this->cliobj);
             $this->render('clientes/edit');
-        }
     }
 }
 ?>
