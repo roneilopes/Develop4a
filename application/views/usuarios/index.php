@@ -38,6 +38,7 @@
 				</tr>
 			</thead>
 			<tbody>
+<<<<<<< HEAD
                             <?php foreach ($valores as $i){?>
                             <tr><td><?= $i['id']?></td>
                             <td><?= $i['nome']?></td>
@@ -50,6 +51,25 @@
                             </td>
                             </tr>
                             <?php }?>
+=======
+                                
+                                try {
+                                    echo "<tr><td>{$valores[$i]['id']}</td>";
+                                    echo "<td>{$valores[$i]['nome']}</td>";
+                                    echo "<td>{$valores[$i]['sobrenome']}</td>";
+                                    echo "<td>{$valores[$i]['login']}</td>";
+                                    echo "<td>{$valores[$i]['grupo']}</td>"
+                                    . "<td class='actions'>
+                                                        <a class='btn btn-success btn-xs'  href='#' data-toggle='modal' data-target='#delete-modal'>Visualizar</a>
+                                                        <a class='btn btn-warning btn-xs' href=" . base_url('usuarios/edit') . ">Editar</a>
+                                                        <a class='btn btn-danger btn-xs'  href='#' data-toggle='modal' data-target='#delete-modal'>Excluir</a></td>"
+                                    . "</tr>";
+                                    $i++;
+                                } catch (Exception $ex) {
+                                    return base_url('usuarios');
+                                }
+                            }
+>>>>>>> 7c603e355a150f65bb75456d51fb93cfe7814c8a
 			</tbody>
 		</table>
 	</div>
