@@ -43,7 +43,7 @@
                             <td><?= $i['descricao']?></td>
                             <td><?= $i['salario']?></td>
                             <td class="actions">
-                            <a class='btn btn-success btn-xs'  href='<?=base_url('cargos/mostrar')?>'>Visualizar</a>
+                            <a class='btn btn-success btn-xs'  href='<?=base_url('cargos/mostrar/'.$i['id'])?>'>Visualizar</a>
                             <a class="btn btn-warning btn-xs" href="<?=base_url('cargos/edit')?>">Editar</a>
                             <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
                             </td>

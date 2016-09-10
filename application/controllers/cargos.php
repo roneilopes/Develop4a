@@ -1,7 +1,7 @@
 <?php
 
 class Cargos extends Controller {
-
+    
     function __construct() {
         parent::__construct();
         $this->load->native_helper('URLHelper');
@@ -35,8 +35,13 @@ class Cargos extends Controller {
          $this->render('cargos/edit');
     }
     
-    public function mostrar() {
+    public function mostrar($id) {
+        
+        $this->cobj->getById($id);
+        
+        print_r($this->cobj);
         $this->render('cargos/mostrar');
+        
     }
 }
 
