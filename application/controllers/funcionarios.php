@@ -38,6 +38,5 @@ class Funcionarios extends Controller {
          $this->render('funcionarios/edit');
     }
     
-    
 }
 ?>

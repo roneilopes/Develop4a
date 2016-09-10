@@ -14,7 +14,7 @@
   	  </div>
 	  <div class="form-group col-md-4">
   	  	<label for="telefone">Telefone</label>
-                <input type="text" pattern="\(\d{2}\)\d{4}-\d{4}" class="form-control"  name="telefone" id="cnpj" placeholder="(69)98766-9821">
+                <input type="tel"  class="form-control"  name="telefone" id="cnpj" placeholder="(69)98766-9821">
   	  </div>
           
             <div class="row">
