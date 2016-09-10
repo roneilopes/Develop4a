@@ -34,7 +34,10 @@ class Cargos extends Controller {
         }
          $this->render('cargos/edit');
     }
-
+    
+    public function mostrar() {
+        $this->render('cargos/mostrar');
+    }
 }
 
 ?>
