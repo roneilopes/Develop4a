@@ -34,8 +34,50 @@ class Funcionarios extends Controller {
         }
     }
 
-    public function edit(){
-         $this->render('funcionarios/edit');
+    public function edit($id){
+        if(isset($_POST['submit'])){
+            $nobj = $this->post_to_obj(array('nome','entrada','telefone','cargo_id','endereco_id'), new Funcionario());
+            $nobj->save();
+            redirect('funcionarios');
+        }
+        
+        $car = new Cargo();
+        $car->get();
+        $this->data['dadosCar'] = $car->all_to_array();
+        $this->funcobj->getById($id);
+        $this->data['edit_func'] = $this->funcobj->to_array();
+        
+        $end = new Endereco();
+        $end->get();
+        $this->data['dadosEnd'] = $end->all_to_array();
+        $this->funcobj->getById($id);
+        $this->data['edit_func'] = $this->funcobj->to_array();
+    
+        $this->render('funcionarios/edit');
+    }
+    
+    public function mostrar($id) {
+        
+        $func = new Funcionario();
+        $func->get();
+        $this->data['dadosFunc'] = $func->all_to_array();
+        $this->funcobj->getById($id);
+        $this->data['edit_func'] = $this->funcobj->to_array();
+        
+        $car = new Cargo();
+        $car->get();
+        $this->data['dadosCar'] = $car->all_to_array();
+        $this->funcobj->getById($id);
+        $this->data['edit_func'] = $this->funcobj->to_array();
+        
+        $end = new Endereco();
+        $end->get();
+        $this->data['dadosEnd'] = $end->all_to_array();
+        $this->funcobj->getById($id);
+        $this->data['edit_func'] = $this->funcobj->to_array();
+        
+        $this->render('funcionarios/mostrar');
+        
     }
     
 }

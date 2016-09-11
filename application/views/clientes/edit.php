@@ -10,20 +10,20 @@
         </div>
         <div class="row">
             <div class="form-group col-md-4">
-                <label for="exampleInputEmail1">CPF</label>
-                <input type="text" name="cpf" class="form-control" id="exampleInputEmail1"  value="<?=$edit_user['cpf']?>">
+                <label for="cpf">CPF</label>
+                <input type="text" name="cpf" class="form-control" id="cpf"  value="<?=$edit_user['cpf']?>">
             </div>
         </div>
         <div class="row">
             <div class="form-group col-md-4">
-                <label for="exampleInputEmail1">Telefone</label>
-                <input type="text" name="telefone" class="form-control" id="exampleInputEmail1"  value="<?=$edit_user['telefone']?>">
+                <label for="telefone">Telefone</label>
+                <input type="text" name="telefone" class="form-control" id="telefone"  value="<?=$edit_user['telefone']?>">
             </div>
         </div>
         <div class="row">
             <div class="form-group col-md-4">
                 <label for="renda">Renda</label>
-                <input type="number" name="renda" class="form-control" id="renda"  value="<?= $edit_user['renda'] ?>">
+                <input type="text" name="renda" class="form-control" id="renda"  value="<?= $edit_user['renda'] ?>">
             </div>
         </div>
         <div class="row">
@@ -53,7 +53,7 @@
 
         <div class="row">
             <div class="col-md-12">
-                <button type="submit" class="btn btn-primary">Salvar</button>
+                <button type="submit" class="btn btn-primary">Atualizar</button>
                 <input type="hidden" name="id" value="<?=$edit_user['id']?>"/>
                 <input type="hidden" name="submit"/>
                 <a href="<?= base_url('clientes') ?>" class="btn btn-default">Cancelar</a>

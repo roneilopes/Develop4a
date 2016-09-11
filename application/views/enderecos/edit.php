@@ -5,28 +5,28 @@
   <form action="<?= base_url('enderecos/add')?>" method="post">
   	<div class="row">
           <div class="form-group col-md-4">
-  	  	<label for="id">Id</label>
-                <input type="number" class="form-control" id="id" placeholder="Id">
+  	  	<label for="id">ID</label>
+                <input type="number" class="form-control" id="id" value="<?=$edit_end['id']?>">
   	  </div>
 	  <div class="form-group col-md-4">
   	  	<label for="cep">Cep</label>
-                <input type="number" class="form-control" id="cep" placeholder="CEP">
+                <input type="number" class="form-control" id="cep" value="<?=$edit_end['cep']?>">
   	  </div>
 	  <div class="form-group col-md-4">
   	  	<label for="logradouro">Logradouro</label>
-                <input type="text" class="form-control" id="logradouro" placeholder="Logradouro">
+                <input type="text" class="form-control" id="logradouro" value="<?=$edit_end['logradouro']?>">
   	  </div>
           <div class="form-group col-md-4">
   	  	<label for="bairro">Bairro</label>
-                <input type="text" class="form-control" id="bairro" placeholder="Bairro">
+                <input type="text" class="form-control" id="bairro" value="<?=$edit_end['bairro']?>">
   	  </div>
           <div class="form-group col-md-4">
   	  	<label for="cidade">Cidade</label>
-                <input type="text" class="form-control" id="cidade" placeholder="Cidade">
+                <input type="text" class="form-control" id="cidade" value="<?=$edit_end['cidade']?>">
   	  </div>
           <div class="form-group col-md-4">
   	  	<label for="estado">Estado</label>
-                <input type="text" class="form-control" id="estado" placeholder="Estado">
+                <input type="text" class="form-control" id="estado" value="<?=$edit_end['estado']?>">
   	  </div>
           <!-- data cadastro e endereço_id -->
 	</div>

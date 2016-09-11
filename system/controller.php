@@ -9,12 +9,16 @@ class Controller{
 	public $data = array();
 
 	function __construct(){
-		$this->load = new Loader();
-
+		
+                $this->load = new Loader();
 		$this->cliobj = new Cliente();
-
 		$this->cobj = new Cargo();
-
+                $this->categobj = new Categoria();
+                $this->endobj = new Endereco();
+                $this->fornobj = new Fornecedor();
+                $this->funcobj = new Funcionario();
+                $this->prodobj = new Produto();
+                
 	}
 
 	protected function view($file, Array $vars = null){

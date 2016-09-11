@@ -49,8 +49,9 @@
                             <td><?= $i['cidade']?></td>
                             <td><?= $i['estado']?></td>
                             <td class="actions">
-                            <a class="btn btn-warning btn-xs" href="<?=base_url('enderecos/edit')?>">Editar</a>
-                            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                            <a class="btn btn-success btn-sm" href="<?=base_url('enderecos/mostrar/'.$i['id'])?>">Visualizar</a>
+                            <a class="btn btn-warning btn-sm" href="<?=base_url('enderecos/edit/'.$i['id'])?>">Editar</a>
+                            <a class="btn btn-danger btn-sm"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
                             </td>
                             </tr>
                             <?php }?>

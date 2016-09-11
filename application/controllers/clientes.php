@@ -38,6 +38,8 @@ class Clientes extends Controller {
                 #print_r($nobj);exit;
                 redirect('clientes');
             }
+    
+            
             $end = new Endereco();
             $end->get();
             $this->data['dadosEnd'] = $end->all_to_array();
@@ -58,7 +60,15 @@ class Clientes extends Controller {
         $this->data['edit_user'] = $this->cliobj->to_array();
         
         
-        // ENDEREÇOS
+        // FORNECEDOR
+      
+        $end = new Endereco();
+        $end->get();
+        $this->data['dadosEnd'] = $end->all_to_array();
+        $this->cliobj->getById($id);
+        $this->data['edit_user'] = $this->cliobj->to_array();
+        
+        // CATEGORIA
       
         $end = new Endereco();
         $end->get();

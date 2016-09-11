@@ -24,14 +24,30 @@ class Categorias extends Controller {
         }
     }
     
-    public function edit(){
-        if(isset($_POST['submit'])){
-            $novo = $this->post_to_obj(array('nome'), new Categoria());
-            $novo->update();
-            $this->render('categoria/index');
-        }else{
-            $this->render('categoria/edit');
+    public function edit($id){
+        if(isset ($_POST['submit'])){
+            $nobj = $this->post_to_obj(array('id','nome'), new Categoria());
+            $nobj->save();
+            redirect('categorias');
         }
+        
+        $cat = new Categoria();
+        $cat->get();
+        $this->data['dadosCateg'] = $cat->all_to_array();
+        $this->categobj->getById($id);
+        $this->data['edit_categ'] = $this->categobj->to_array();
+        
+        $this->render('categorias/edit');
+    }
+    
+    public function mostrar($id) {
+        $cat = new Categoria();
+        $cat->get();
+        $this->data['dadosCategoria'] = $cat->all_to_array();
+        $this->categobj->getById($id);
+        $this->data['edit_categ'] = $this->categobj->to_array();
+        
+        $this->render('categorias/mostrar');
     }
 
 }

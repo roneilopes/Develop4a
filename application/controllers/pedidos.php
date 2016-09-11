@@ -33,7 +33,11 @@ class Pedidos extends Controller {
         }
     }
     public function edit(){
-         $this->render('pedidos/edit');
+         
+    }
+    
+    public function mostrar() {
+        
     }
 }
 ?>

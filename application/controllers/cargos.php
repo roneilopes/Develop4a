@@ -28,31 +28,35 @@ class Cargos extends Controller {
     public function edit($id){
         
         if(isset ($_POST['submit'])){
-            $nobj = $this->post_to_obj(array('descricao','salario'), new Cargo());
+            $nobj = $this->post_to_obj(array('id','descricao','salario'), new Cargo());
             $nobj->save();
             redirect('cargos');
         }
         
-        $carg = new Cargo();
-        $carg->get();
-        $this->data['dadosCargo'] = $carg->all_to_array();
+        $car = new Cargo();
+        $car->get();
+        $this->data['dadosCargo'] = $car->all_to_array();
         $this->cobj->getById($id);
-        $this->data['edit_user'] = $this->cobj->to_array();
+        $this->data['edit_cargo'] = $this->cobj->to_array();
+        
         $this->render('cargos/edit');
+        
+        
     }
     
     public function mostrar($id) {
         
-        $carg = new Cargo();
-        $carg->get();
-        //print_r($carg);
-        $this->data['dadosCargo'] = $carg->all_to_array();
+        $car = new Cargo();
+        $car->get();
+        $this->data['dadosCargo'] = $car->all_to_array();
         $this->cobj->getById($id);
-        $this->data['edit_user'] = $this->cobj->to_array();
+        $this->data['edit_cargo'] = $this->cobj->to_array();
         
         $this->render('cargos/mostrar');
 
     }
+    
+    
 }
 
 ?>

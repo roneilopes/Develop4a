@@ -7,17 +7,17 @@
             
   	  <div class="form-group col-md-4">
   	  	<label for="id">ID</label>
-                <input type="number" class="form-control" id="id" value="<?=$edit_user['id']?>">
+                <input type="number" class="form-control" id="id" value="<?=$edit_cargo['id']?>">
   	  </div>
             
 	  <div class="form-group col-md-4">
   	  	<label for="descricao">Descrição</label>
-                <input type="text" class="form-control" id="descricao" value="<?=$edit_user['descricao']?>">
+                <input type="text" class="form-control" id="descricao" value="<?=$edit_cargo['descricao']?>">
   	  </div>
             
 	  <div class="form-group col-md-4">
   	  	<label for="salario">Salário</label>
-                <input type="number" class="form-control" id="salario" value="<?=$edit_user['salario']?>" >
+                <input type="number" class="form-control" id="salario" value="<?=$edit_cargo['salario']?>" >
   	  </div>
 	</div>
 	
