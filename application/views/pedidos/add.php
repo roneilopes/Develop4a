@@ -2,10 +2,10 @@
     <h3 class="page-header">Adicionar Pedidos'</h3>
     <form action="<?= base_url('pedidos/add') ?>" method="post">
         <div class="row">
-            <div class="row">
+            
                 <div class="form-group col-md-4">
                     <label for="funcionario">Funcionário</label>
-                    <select name="funcionario_id" id="funcionario" class="form-control" placeholder="Selecione" autofocus="">
+                    <select name="funcionario_id" id="funcionario" class="form-control" autofocus="">
                         <option disabled selected> Selecione Funcionário</option>
                         <?php
                         $i = 0;
@@ -20,11 +20,11 @@
                         ?>
                     </select>
                 </div>
-            </div>
-            <div class="row">
+            
+            
                 <div class="form-group col-md-4">
                     <label for="cliente">Cliente</label>
-                    <select name="cliente_id" id="funcionario" class="form-control" placeholder="Selecione">
+                    <select name="cliente_id" id="funcionario" class="form-control">
                         <option disabled selected> Selecione Cliente</option>
                         <?php
                         $i = 0;
@@ -38,8 +38,8 @@
                         }
                         ?>
                     </select>
+                
                 </div>
-            </div>
         </div>
         <hr>
 
