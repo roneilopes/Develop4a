@@ -39,5 +39,12 @@ class Pedidos extends Controller {
     public function mostrar() {
         
     }
+    
+    public function deleta($id) {
+        
+        
+            $this->pedobj->deleteById($id);
+            redirect('pedidos');
+    }
 }
 ?>

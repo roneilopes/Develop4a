@@ -80,5 +80,11 @@ class Funcionarios extends Controller {
         
     }
     
+    public function deleta($id) {
+        
+        
+            $this->funcobj->deleteById($id);
+            redirect('funcionarios');
+    }
 }
 ?>
