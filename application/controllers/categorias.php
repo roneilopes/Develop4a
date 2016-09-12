@@ -27,7 +27,7 @@ class Categorias extends Controller {
     public function edit($id){
         if(isset ($_POST['submit'])){
             $nobj = $this->post_to_obj(array('id','nome'), new Categoria());
-            $nobj->save();
+            $nobj->update();
             redirect('categorias');
         }
         

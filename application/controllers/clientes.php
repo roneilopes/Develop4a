@@ -45,7 +45,7 @@ class Clientes extends Controller {
             $this->data['dadosEnd'] = $end->all_to_array();
             $this->cliobj->getById($id);
             $this->data['edit_user'] = $this->cliobj->to_array();
-            //var_dump($this->cliobj);
+
             $this->render('clientes/edit');
     }
     
@@ -60,15 +60,7 @@ class Clientes extends Controller {
         $this->data['edit_user'] = $this->cliobj->to_array();
         
         
-        // FORNECEDOR
-      
-        $end = new Endereco();
-        $end->get();
-        $this->data['dadosEnd'] = $end->all_to_array();
-        $this->cliobj->getById($id);
-        $this->data['edit_user'] = $this->cliobj->to_array();
-        
-        // CATEGORIA
+        // ENDEREÇOS
       
         $end = new Endereco();
         $end->get();

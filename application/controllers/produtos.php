@@ -40,6 +40,12 @@ class Produtos extends Controller{
             redirect('produtos');
         }
   
+            $prod = new Produto();
+            $prod->get();
+            $this->data['dadosProd'] = $prod->all_to_array();
+            $this->prodobj->getById($id);
+            $this->data['edit_prod'] = $this->prodobj->to_array();
+            
             $forn = new Fornecedor();
             $forn->get();
             $this->data['dadosForn'] = $forn->all_to_array();

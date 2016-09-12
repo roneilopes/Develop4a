@@ -18,6 +18,7 @@ class Controller{
                 $this->fornobj = new Fornecedor();
                 $this->funcobj = new Funcionario();
                 $this->prodobj = new Produto();
+                $this->userobj = new Usuario();
                 
 	}
 
