@@ -46,5 +46,12 @@ class Usuarios extends Controller {
         $this->data['edit_usuario'] = $this->userobj->to_array();
         $this->render('usuarios/mostrar');
     }
+    
+    public function deleta($id) {
+        
+        
+            $this->userobj->deleteById($id);
+            redirect('usuarios');
+    }
 }
 ?>

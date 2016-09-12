@@ -56,7 +56,12 @@ class Cargos extends Controller {
 
     }
     
-    
+    public function deleta($id) {
+        
+        
+            $this->cobj->deleteById($id);
+            redirect('cargos');
+    }
 }
 
 ?>

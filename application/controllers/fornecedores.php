@@ -70,6 +70,12 @@ class Fornecedores extends Controller {
         $this->render('fornecedores/mostrar');
         
     }
-   
+    
+    public function deleta($id) {
+        
+        
+            $this->fornobj->deleteById($id);
+            redirect('categorias');
+    }   
 }
 ?>

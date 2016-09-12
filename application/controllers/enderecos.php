@@ -46,5 +46,12 @@ class Enderecos extends Controller {
         $this->data['edit_end'] = $this->endobj->to_array();
         $this->render('enderecos/mostrar');
     }
+    
+    public function deleta($id) {
+        
+        
+            $this->endobj->deleteById($id);
+            redirect('enderecos');
+    }
 }
 ?>

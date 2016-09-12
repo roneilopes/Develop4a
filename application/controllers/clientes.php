@@ -73,6 +73,11 @@ class Clientes extends Controller {
         $this->render('clientes/mostrar');
     }
     
-    
+    public function deleta($id) {
+        
+        
+            $this->cliobj->deleteById($id);
+            redirect('clientes');
+    }
 }
 ?>
