@@ -73,7 +73,7 @@
 	</div> <!-- /#bottom -->
  </div> <!-- /#main -->
 
-<!-- Modal -->
+<!--
 <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -91,4 +91,4 @@
     </div>
   </div>
 </div>
-
+-->
