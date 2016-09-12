@@ -63,7 +63,22 @@ class Produtos extends Controller{
     
     public function mostrar($id) {
         
-        // PRODUTOS
+       
+        
+        // FORNECEDORES
+      
+        $forn = new Fornecedor();
+        $forn->get();
+        $this->data['dadosForn'] = $forn->all_to_array();
+       
+        
+        // CATEGORIAS
+        
+        $cat = new Categoria();
+        $cat->get();
+        $this->data['dadosCateg'] = $cat->all_to_array();
+       
+         // PRODUTOS
         
         $prod = new Produto();
         $prod->get();
@@ -72,27 +87,16 @@ class Produtos extends Controller{
         $this->prodobj->getById($id);
         $this->data['edit_prod'] = $this->prodobj->to_array();
         
-        
-        // FORNECEDORES
-      
-        $forn = new Fornecedor();
-        $forn->get();
-        $this->data['dadosForn'] = $forn->all_to_array();
-        $this->prodobj->getById($id);
-        $this->data['edit_prod'] = $this->prodobj->to_array();
-        
-        // CATEGORIAS
-        
-        $cat = new Categoria();
-        $cat->get();
-        $this->data['dadosCateg'] = $cat->all_to_array();
-        $this->prodobj->getById($id);
-        $this->data['edit_prod'] = $this->prodobj->to_array();
-        
      
         // CHAMA PAGINA
         
         $this->render('produtos/mostrar');
+    }
+    
+    public function deleta($id) {
+
+            $this->prodobj->deleteById($id);
+            redirect('produtos');
     }
     
 
