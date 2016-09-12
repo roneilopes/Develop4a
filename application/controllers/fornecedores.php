@@ -75,7 +75,7 @@ class Fornecedores extends Controller {
         
         
             $this->fornobj->deleteById($id);
-            redirect('categorias');
+            redirect('fornecedores');
     }   
 }
 ?>
