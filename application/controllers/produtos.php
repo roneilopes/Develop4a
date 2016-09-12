@@ -82,8 +82,8 @@ class Produtos extends Controller{
         
         $prod = new Produto();
         $prod->get();
-        
         $this->data['dadosProd'] = $prod->all_to_array();
+        
         $this->prodobj->getById($id);
         $this->data['edit_prod'] = $this->prodobj->to_array();
         

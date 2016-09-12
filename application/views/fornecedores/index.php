@@ -49,7 +49,7 @@
                             <td class="actions">
                             <a class="btn btn-success btn-sm"  href="<?=base_url('fornecedores/mostrar/'.$i['id'])?>">Visualizar</a>
                             <a class="btn btn-warning btn-sm" href="<?=base_url('fornecedores/edit/'.$i['id'])?>">Editar</a>
-                            <a class="btn btn-danger btn-sm"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                            <a class="btn btn-danger btn-sm"  href="<?=base_url('fornecedores/deleta/'.$i['id'])?>" >Excluir</a>
                             </td>
                             </tr>
                             <?php }?>
@@ -72,7 +72,7 @@
 	</div> <!-- /#bottom -->
  </div> <!-- /#main -->
 
-<!-- Modal -->
+<!-- Modal
 <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -90,6 +90,7 @@
     </div>
   </div>
 </div>
+-->
 
 
 

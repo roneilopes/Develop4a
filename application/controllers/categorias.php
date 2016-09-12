@@ -51,8 +51,7 @@ class Categorias extends Controller {
     }
     
     public function deleta($id) {
-        
-        
+
             $this->categobj->deleteById($id);
             redirect('categorias');
     }

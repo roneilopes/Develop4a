@@ -42,7 +42,7 @@
                             <tr><td><?= $i['id']?></td>
                             <td class="actions">
                             <a class="btn btn-warning btn-xs" href="<?=base_url('pedidos/edit')?>">Editar</a>
-                            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                            <a class="btn btn-danger btn-sm"  href="<?=base_url('pedidos/deleta/'.$i['id'])?>" >Excluir</a>
                             </td>
                             </tr>
                             <?php }?>
@@ -65,7 +65,7 @@
 	</div> <!-- /#bottom -->
  </div> <!-- /#main -->
 
-<!-- Modal -->
+<!-- Modal
 <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -83,4 +83,5 @@
     </div>
   </div>
 </div>
+-->
 
